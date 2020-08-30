@@ -6,7 +6,7 @@
 ### Home Page:
 > GET: https://covidbd-api.herokuapp.com
 
-![home-01](https://github.com/rebornbd/covidbd-api/blob/master/img/home-02.png)
+![home](https://raw.githubusercontent.com/rebornbd/covidbd-api/master/img/home-02.png)
 
 ### District data
 #### format: json
