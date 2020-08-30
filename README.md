@@ -3,6 +3,11 @@
 
 ## Documentation
 
+### Home Page:
+> GET: https://covidbd-api.herokuapp.com
+
+![](img/home.png?raw=true)
+
 ### District data
 #### format: json
 
