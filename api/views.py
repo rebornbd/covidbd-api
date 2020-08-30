@@ -30,20 +30,28 @@ def getCountNumber(number):
         return int(number)
     except ValueError:
         return int(0)
+        
+def getLastUpdatedDate():
+    districts = getDistricts()
+
+    indx = 0
+    date = ''
+    for dist in districts:
+        indx = indx + 1
+
+        if (indx == 3):
+            distrow = dist.find_all('td')
+            distData = [distcol.text.strip() for distcol in distrow]
+            date = distData[4]
+
+    return date
 
 def home(request):
-    data = { "end_point" : 'http://localhost:8000' }
+    data = { "end_point" : 'http://localhost' }
     return render(request, 'home.html', context=data)
 
 def getDistrictData(request):
-    url = getURL()
-    response = requests.get(url)
-    html = response.content
-
-    soup = bs(html, 'html.parser')
-    table = soup.find('div', attrs={'class': 'ritz grid-container'})
-    tbody = table.find('tbody')
-    districts = tbody.find_all('tr')
+    districts = getDistricts()
 
     data = []
     indx = 0
@@ -85,7 +93,7 @@ def getDistrictData(request):
     
     distFinalObj = {
         "district": data,
-        "updated_on" : '29-08-2020'
+        "updated_on" : getLastUpdatedDate()
     }
 
     distFinalData = json.dumps(distFinalObj)
@@ -117,7 +125,7 @@ def getDivisionData(request):
             
     divFinalObj = {
         "division": data,
-        "updated_on" : '29-08-2020'
+        "updated_on" : getLastUpdatedDate()
     }
 
     divFinalData = json.dumps(divFinalObj)
