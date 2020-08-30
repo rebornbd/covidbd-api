@@ -1,0 +1,45 @@
+.method-cls {
+    background: whitesmoke;
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.link-cls {
+    background: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.desc-cls {
+    background: whitesmoke;
+    color: black;
+    text-align: justify;
+    border-radius: 5px;
+}
+
+.br-cls {
+    border-right: 2px solid black;
+}
+
+.myfooter {
+    clear: both;
+    margin: 50px 0px;
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 10px;
+    border: 1px solid blueviolet;
+}
+
+.heart-icon {
+    width:  10px;
+    height: 10px;
+    color: darkred;
+}
+
+a {
+    text-decoration: none !important;
+}

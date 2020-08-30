@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-primary">An open API For BD Covid-19</h1>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">METHOD</th>
+            <th scope="col">LINK</th>
+            <th scope="col">DESCRIPTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td ></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td scope="row" class="method-cls br-cls"> GET </td>
+            <td class="link-cls br-cls"><a href="{% url 'bdcovidapi:districts' %}" target="_blank">{{ end_point }}/districts</a></td>
+            <td class="desc-cls">Get all district wise data</td>
+          </tr>
+          <tr>
+            <td ></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td scope="row" class="method-cls br-cls"> GET </td>
+            <td class="link-cls br-cls"><a href="{% url 'bdcovidapi:divisions' %}" target="_blank">{{ end_point }}/divisions</a></td>
+            <td class="desc-cls">Get all division wise data</td>
+          </tr>
+          <tr>
+            <td ></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td scope="row" class="method-cls br-cls"> GET </td>
+            <td class="link-cls br-cls"><a href="{% url 'bdcovidapi:status' %}" target="_blank">{{ end_point }}/status</a></td>
+            <td class="desc-cls">Get all status data</td>
+          </tr>
+          <tr>
+            <td ></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td scope="row" class="method-cls br-cls"> GET </td>
+            <td class="link-cls br-cls"><a href="{% url 'bdcovidapi:about' %}" target="_blank">{{ end_point }}/about</a></td>
+            <td class="desc-cls">About me</td>
+          </tr>
+        </tbody>
+    </table>
+
+    <div class="myfooter">
+      Made with <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="heart-icon"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" class=""></path></svg> by<a class="github" href="https://github.com/dipta-dhar" target="_blank"> Dipta</a>
+    </div>
+    
+{% endblock content %}
+
