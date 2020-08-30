@@ -124,7 +124,7 @@ def getDivisionData(request):
     return HttpResponse(divFinalData, content_type="application/json")
 
 def getStatus(request):
-    url = 'https://coronavirus-19-api.herokuapp.com/countries/bangladesh'
+    url = getURL()
     response = requests.get(url)
     status = response.content
 
